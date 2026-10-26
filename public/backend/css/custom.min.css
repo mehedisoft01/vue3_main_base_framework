@@ -1,0 +1,32 @@
+.drop_zone {
+    height: 120px;
+    width: 100%;
+    background: #ddd;
+}
+input.file_upload{
+    display: none;
+}
+.drop_zone.pointer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+}
+
+.bg-theme .form-control:disabled, .bg-theme .form-control[readonly] {
+    background-color: rgb(233 236 239 / 5%);
+}
+.action {
+    width: 28px;
+    height: 28px;
+    padding: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.action i {
+    font-size: 14px;
+}
