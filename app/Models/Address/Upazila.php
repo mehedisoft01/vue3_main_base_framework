@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Validator;
 
 class Upazila extends Model
 {
-    protected $table = 'thanas';
+    protected $table = 'upazilas';
     protected $fillable = ['upazila_name','district_id','division_id','upazila_code','status'];
 
 
