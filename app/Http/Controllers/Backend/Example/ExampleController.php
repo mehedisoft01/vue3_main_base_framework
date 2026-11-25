@@ -122,7 +122,7 @@ class ExampleController extends Controller
             $data->update($input);
 
             ExampleItem::where('example_id', $id)->delete();
-            foreach ($request->construction_activity_items ?? [] as $item) {
+            foreach ($request->example_items ?? [] as $item) {
                 ExampleItem::create([
                     'example_id'       => $id,
                     'item_name'        => $item['item_name'] ?? null,

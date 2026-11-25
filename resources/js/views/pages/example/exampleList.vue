@@ -14,7 +14,7 @@
         ...appStore().useGetters('dataList', 'httpRequest', 'pageDependencies', 'updateId')
     };
 
-    const tableHeaders = ref(["#",{name: '', listObject: dataList}, "example_name", "example_date","remarks","status", "Actions"]);
+    const tableHeaders = ref(["#",{name: '', listObject: dataList}, "example_name", "example_date","month","remarks","status", "Actions"]);
     const {getDataList, httpReq,urlGenerate} = useHttp();
 
     onMounted(() => {
@@ -45,6 +45,7 @@
                 <td class="checkbox"><input :checked="item.checked" @change="handleSelectAll($event, [item])" class="form-check-input me-3 pointer" type="checkbox"/></td>
                 <td>{{ item.example_name }}</td>
                 <td>{{ item.example_date }}</td>
+                <td>{{ item.month }}</td>
                 <td>{{ item.remarks }}</td>
                 <td>
                     <a @click="changeStatus({obj:item})" class="pointer" v-html="statusBadge(item.status)"></a>

@@ -118,11 +118,10 @@
                                                     <label class="form-label fw-semibold">{{ _l('example_date') }}</label>
                                                     <datepicker type="text" v-model="formObject.example_date" class="form-control" v-validate="'required'" name="example_date"/>
                                                 </div>
-<!--                                                <div class="col-md-4">-->
-<!--                                                    <label class="form-label fw-semibold">{{ _l('target_month')-->
-<!--                                                        }}</label>-->
-<!--                                                    <Monthpicker v-model="formObject.target_month" name="target_month"/>-->
-<!--                                                </div>-->
+                                                <div class="col-md-4">
+                                                    <label class="form-label fw-semibold">{{ _l('month') }}</label>
+                                                    <Monthpicker v-model="formObject.month" name="month"/>
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-semibold">{{ _l('remarks') }}</label>

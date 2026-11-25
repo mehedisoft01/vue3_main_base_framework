@@ -16,7 +16,10 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('example_name');
             $table->date('example_date');
-            $table->text('remarks');
+            $table->string('month');
+            $table->decimal('total_qty',15,2);
+            $table->decimal('grand_total',15,2);
+            $table->text('remarks')->nullable();
             $table->integer('status')->default(1)->comment('1=Active,2=InActive');
             $table->timestamps();
         });
