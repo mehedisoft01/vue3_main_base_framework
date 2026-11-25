@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\RBAC\RolePermissionController;
 use App\Http\Controllers\Backend\Address\DivisionController;
 use App\Http\Controllers\Backend\Address\DistrictController;
 use App\Http\Controllers\Backend\Address\UpazilaController;
+use App\Http\Controllers\Backend\Example\ExampleController;
 
 // =====================================================
 //  Localization & Route Configuration
@@ -82,6 +83,8 @@ Route::middleware([AuthMiddleware::class, LogActivity::class])->group(function (
         Route::resource('/district', DistrictController::class);
         Route::resource('/upazila', UpazilaController::class);
 
+
+        Route::resource('/example', ExampleController::class);
 
     });
 });

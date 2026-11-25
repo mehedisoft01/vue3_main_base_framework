@@ -176,6 +176,27 @@ class ModuleSeeder extends Seeder
                 ]
             ],
 
+            [
+                'name' => 'example',
+                'link' => '/example',
+                'permissions' => array_merge($resourcePermissions, []),
+                'icon' => 'bx bx-list-ul',
+                "component" => "views/pages/example/exampleList.vue",
+                'meta' => [
+                    "dataUrl" => "api/example", 'title' => 'Example List',
+                ]
+            ],
+            [
+                'name' => 'example/create',
+                'link' => '/example/create',
+                'permissions' => array_merge($resourcePermissions, []),
+                'icon' => 'bx bx-radio-circle',
+                "component" => "views/pages/example/exampleFrom.vue",
+                'is_visible' => '0',
+                'meta' => [
+                    "dataUrl" => "api/example", 'title' => 'Example From',
+                ]
+            ],
         ];
 
         foreach ($modules as $data) {
