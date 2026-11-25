@@ -70,5 +70,22 @@
     "company_city": "Company City",
     "company_phone": "Company Phone",
     "company_email": "Company Email",
-    "company_website": "Company Website"
+    "company_website": "Company Website",
+    "example_create_from": "Example Create From",
+    "example_information": "Example Information",
+    "example_date": "Example Date",
+    "remarks": "Remarks",
+    "example_name": "Example Name",
+    "purchase_order_line_item": "Purchase Order Line Item",
+    "item_name": "Item Name",
+    "quantity": "Quantity",
+    "rate": "Rate",
+    "amount": "Amount",
+    "example_summary": "Example Summary",
+    "total_quantity": "Total Quantity",
+    "grand_total": "Grand Total",
+    "save": "Save",
+    "back_to_list": "Back To List",
+    "cancel": "Cancel",
+    "example": "Example"
 }

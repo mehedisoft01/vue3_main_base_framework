@@ -1,6 +1,7 @@
 <script setup>
-    import { MultipleFileUpload,fromModal,fileUpload } from '@/components';
+    import { MultipleFileUpload,fileUpload,TinyEditor } from '@/components';
     import Datepicker from "../../../plugins/datepicker.vue";
+    import Monthpicker from "../../../plugins/monthpicker.vue";
 
     import { useRouter, useRoute } from 'vue-router';
     import { ref, onMounted,computed} from 'vue';
@@ -117,10 +118,15 @@
                                                     <label class="form-label fw-semibold">{{ _l('example_date') }}</label>
                                                     <datepicker type="text" v-model="formObject.example_date" class="form-control" v-validate="'required'" name="example_date"/>
                                                 </div>
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <label class="form-label fw-semibold">{{ _l('target_month')-->
+<!--                                                        }}</label>-->
+<!--                                                    <Monthpicker v-model="formObject.target_month" name="target_month"/>-->
+<!--                                                </div>-->
                                             </div>
                                             <div class="col">
                                                 <label class="form-label fw-semibold">{{ _l('remarks') }}</label>
-                                                <textarea type="text" v-model="formObject.remarks" class="form-control" v-validate="'required'" name="remarks"/>
+                                                <TinyEditor type="text" v-model="formObject.remarks" class="form-control" name="remarks"/>
                                             </div>
                                         </div>
                                     </div>
