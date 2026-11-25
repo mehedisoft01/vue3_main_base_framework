@@ -19,4 +19,9 @@ class Example extends Model
 
         return $validate;
     }
+
+    public function exampleItems()
+    {
+        return $this->hasMany(ExampleItem::class, 'example_id', 'id');
+    }
 }

@@ -30,9 +30,7 @@
             formObject.value[key] = '';
         });
 
-        formObject.value.example_items = [
-            { item_name: '',quantity: '',rate: '', amount: '', remarks: ''}
-        ];
+        formObject.value.example_items = [{ item_name: '',quantity: '',rate: '', amount: '', remarks: ''}];
 
         store.commit('updateId', null);
     };
@@ -45,9 +43,7 @@
             const res = await httpReq({ url: `${urlGenerate()}/${id}/edit`, method: 'get', loader: true });
             const data = res.data || res;
             if (!Array.isArray(data.example_items) || data.example_items.length === 0) {
-                data.example_items = [
-                    { item_name: '',quantity: '',rate: '', amount: '', remarks: ''}
-                ];
+                data.example_items = [{ item_name: '',quantity: '',rate: '', amount: '', remarks: ''}];
             }
             // console.log('edit fetch', data)
             store.commit('formObject', data);
@@ -75,9 +71,7 @@
 
     onMounted(() => {
 
-        formObject.value.example_items = [
-            { item_name: '',quantity: '',rate: '', amount: '', remarks: ''}
-        ];
+        formObject.value.example_items = [{ item_name: '',quantity: '',rate: '', amount: '', remarks: ''}];
 
         if (isEdit.value) {
             editDataInformation(idParam.value)

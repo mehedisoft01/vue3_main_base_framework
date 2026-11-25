@@ -93,7 +93,7 @@ class ExampleController extends Controller
 
         try {
             $data = $this->model->findOrFail($id);
-            $data->setAttribute('construction_activity_items', $data->constructionActivityItems);
+            $data->setAttribute('example_items', $data->exampleItems);
 
             return returnData(2000, $data);
         } catch (\Exception $exception) {
@@ -138,6 +138,23 @@ class ExampleController extends Controller
             return returnData(2000, null, 'Successfully Updated');
         } catch (\Exception $exception) {
             DB::rollBack();
+            return returnData(5000, $exception->getMessage(), 'Whoops, Something Went Wrong..!!');
+        }
+    }
+
+
+    public function show($id)
+    {
+        if (!can('example.show')) {
+            return $this->notPermitted();
+        }
+
+        try {
+            $data = $this->model->findOrFail($id);
+            $data->setAttribute('example_items', $data->exampleItems);
+
+            return returnData(2000, $data);
+        } catch (\Exception $exception) {
             return returnData(5000, $exception->getMessage(), 'Whoops, Something Went Wrong..!!');
         }
     }

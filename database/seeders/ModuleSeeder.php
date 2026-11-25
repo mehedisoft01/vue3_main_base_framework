@@ -194,7 +194,29 @@ class ModuleSeeder extends Seeder
                 "component" => "views/pages/example/exampleFrom.vue",
                 'is_visible' => '0',
                 'meta' => [
-                    "dataUrl" => "api/example", 'title' => 'Example From',
+                    "dataUrl" => "api/example", 'title' => 'Example Create From',
+                ]
+            ],
+            [
+                'name' => 'example/edit',
+                'link' => '/example/edit/:id?',
+                'permissions' => array_merge($resourcePermissions, []),
+                'icon' => 'bx bx-radio-circle',
+                "component" => "views/pages/example/exampleFrom.vue",
+                'is_visible' => '0',
+                'meta' => [
+                    "dataUrl" => "api/example", 'title' => 'Example edit From',
+                ]
+            ],
+            [
+                'name' => 'example/details',
+                'link' => '/example/details/:id?',
+                'permissions' => array_merge($resourcePermissions, []),
+                'icon' => 'bx bx-radio-circle',
+                "component" => "views/pages/example/exampleDetails.vue",
+                'is_visible' => '0',
+                'meta' => [
+                    "dataUrl" => "api/example", 'title' => 'Example Details From',
                 ]
             ],
         ];

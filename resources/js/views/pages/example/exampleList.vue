@@ -50,13 +50,14 @@
                     <a @click="changeStatus({obj:item})" class="pointer" v-html="statusBadge(item.status)"></a>
                 </td>
                 <td>
-                    <a v-if="can('example.update')" @click="editData({data:item, id:item.id, modal:'fromModal'})" class="btn btn-outline-secondary action me-1">
-                        <i class='bx bxs-show text-warning'></i>
-                    </a>
 
-                    <a v-if="can('example.update')" @click="editData({data:item, id:item.id, modal:'fromModal'})" class="btn btn-outline-secondary action me-1">
-                        <i class='bx bxs-edit text-warning'></i>
-                    </a>
+                    <router-link v-if="can('example.show')" class="btn btn-outline-secondary action me-1" :to="`/example/details/${item.id}`">
+                        <i class="bx bxs-show text-primary"></i>
+                    </router-link>
+
+                    <router-link v-if="can('example.update')" class="btn btn-outline-secondary action me-1" :to="`/example/edit/${item.id}`">
+                        <i class="bx bxs-edit text-warning"></i>
+                    </router-link>
 
                     <a v-if="can('example.destroy')"  @click="deleteRecord({targetId:item.id,listIndex:index, listObject:dataList.data})" class="btn btn-outline-secondary action me-1">
                         <i class='bx bxs-trash text-danger'></i>
